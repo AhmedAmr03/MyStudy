@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="nav-container">
+            <button class="nav-btn active" data-subject="commercial">التجارى</button>
+            <button class="nav-btn" data-subject="tax">الضريبة</button>
+            <button class="nav-btn" data-subject="terms">المصطلحات</button>
+            <button class="nav-btn" data-subject="principles">اصول الفقه</button>
+            <button class="nav-btn" data-subject="arbitration">التحكيم الداخلى و الدولى</button>
+            <button class="nav-btn" data-subject="aviation">البحرى و الجوى</button>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <div class="saved-notes">
+            <h2>الملاحظات المحفوظة</h2>
+            <div class="backup-buttons">
+                <button id="exportBtn" class="backup-btn">حفظ نسخة احتياطية</button>
+                <button id="importBtn" class="backup-btn">استعادة النسخة الاحتياطية</button>
+                <input type="file" id="importInput" accept=".json" style="display: none;">
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchNotes" placeholder="بحث في الملاحظات...">
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="special">اختصاصات</button>
+                    <button class="filter-btn" data-filter="dates">المواعيد</button>
+                    <button class="filter-btn" data-filter="articles">المقالى</button>
+                </div>
+            </div>
+            <div id="savedNotesList"></div>
+        </div>
+        <div class="main-content">
+            <div class="subjects">
+                <div class="subject-section active" data-subject="commercial">
+                    <div class="input-group">
+                        <input type="text" class="note-input" data-subject="commercial" placeholder="أدخل ملاحظة التجارى...">
+                        <input type="number" class="number-input" placeholder="#">
+                        <textarea class="description-input" placeholder="الوصف (اختياري)..."></textarea>
+                        <div class="priority-buttons">
+                            <button class="priority-btn default active" data-priority="default">افتراضى</button>
+                            <button class="priority-btn special" data-priority="special">اختصاصات</button>
+                            <button class="priority-btn dates" data-priority="dates">المواعيد</button>
+                            <button class="priority-btn articles" data-priority="articles">المقالى</button>
+                        </div>
+                        <button class="save-btn">حفظ</button>
+                    </div>
+                </div>
+
+                <div class="subject-section" data-subject="tax">
+                    <div class="input-group">
+                        <input type="text" class="note-input" data-subject="tax" placeholder="أدخل ملاحظة الضريبة...">
+                        <input type="number" class="number-input" placeholder="#">
+                        <textarea class="description-input" placeholder="الوصف (اختياري)..."></textarea>
+                        <div class="priority-buttons">
+                            <button class="priority-btn default active" data-priority="default">افتراضى</button>
+                            <button class="priority-btn special" data-priority="special">اختصاصات</button>
+                            <button class="priority-btn dates" data-priority="dates">المواعيد</button>
+                            <button class="priority-btn articles" data-priority="articles">المقالى</button>
+                        </div>
+                        <button class="save-btn">حفظ</button>
+                    </div>
+                </div>
+
+                <div class="subject-section" data-subject="terms">
+                    <div class="input-group">
+                        <input type="text" class="note-input" data-subject="terms" placeholder="أدخل المصطلح...">
+                        <input type="number" class="number-input" placeholder="#">
+                        <textarea class="description-input" placeholder="الوصف (اختياري)..."></textarea>
+                        <div class="priority-buttons">
+                            <button class="priority-btn default active" data-priority="default">افتراضى</button>
+                            <button class="priority-btn special" data-priority="special">اختصاصات</button>
+                            <button class="priority-btn dates" data-priority="dates">المواعيد</button>
+                            <button class="priority-btn articles" data-priority="articles">المقالى</button>
+                        </div>
+                        <button class="save-btn">حفظ</button>
+                    </div>
+                </div>
+
+                <div class="subject-section" data-subject="principles">
+                    <div class="input-group">
+                        <input type="text" class="note-input" data-subject="principles" placeholder="أدخل ملاحظة اصول الفقه...">
+                        <input type="number" class="number-input" placeholder="#">
+                        <textarea class="description-input" placeholder="الوصف (اختياري)..."></textarea>
+                        <div class="priority-buttons">
+                            <button class="priority-btn default active" data-priority="default">افتراضى</button>
+                            <button class="priority-btn special" data-priority="special">اختصاصات</button>
+                            <button class="priority-btn dates" data-priority="dates">المواعيد</button>
+                            <button class="priority-btn articles" data-priority="articles">المقالى</button>
+                        </div>
+                        <button class="save-btn">حفظ</button>
+                    </div>
+                </div>
+
+                <div class="subject-section" data-subject="arbitration">
+                    <div class="input-group">
+                        <input type="text" class="note-input" data-subject="arbitration" placeholder="أدخل ملاحظة التحكيم...">
+                        <input type="number" class="number-input" placeholder="#">
+                        <textarea class="description-input" placeholder="الوصف (اختياري)..."></textarea>
+                        <div class="priority-buttons">
+                            <button class="priority-btn default active" data-priority="default">افتراضى</button>
+                            <button class="priority-btn special" data-priority="special">اختصاصات</button>
+                            <button class="priority-btn dates" data-priority="dates">المواعيد</button>
+                            <button class="priority-btn articles" data-priority="articles">المقالى</button>
+                        </div>
+                        <button class="save-btn">حفظ</button>
+                    </div>
+                </div>
+
+                <div class="subject-section" data-subject="aviation">
+                    <div class="input-group">
+                        <input type="text" class="note-input" data-subject="aviation" placeholder="أدخل ملاحظة البحرى و الجوى...">
+                        <input type="number" class="number-input" placeholder="#">
+                        <textarea class="description-input" placeholder="الوصف (اختياري)..."></textarea>
+                        <div class="priority-buttons">
+                            <button class="priority-btn default active" data-priority="default">افتراضى</button>
+                            <button class="priority-btn special" data-priority="special">اختصاصات</button>
+                            <button class="priority-btn dates" data-priority="dates">المواعيد</button>
+                            <button class="priority-btn articles" data-priority="articles">المقالى</button>
+                        </div>
+                        <button class="save-btn">حفظ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
