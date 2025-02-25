@@ -71,6 +71,20 @@ body {
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
+.flashcard {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 14px;
+    background: #14213d;
+    color: #e5e5e5;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
 .app-container {
     max-width: 1400px;
     margin: 2.5rem auto;
